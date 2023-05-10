@@ -18,7 +18,7 @@ export const addUser = (req, res) => {
 	database.query(insertQuery, [values], err => {
 		if (err) return res.json(err);
 
-		return res.status(200).json("User added successfully");
+		return res.status(200).json("Usuário adicionado com sucesso!");
 	});
 };
 
@@ -31,7 +31,7 @@ export const updateUser = (req, res) => {
 	database.query(updateQuery, [...values, req.params.id], err => {
 		if (err) return res.json(err);
 
-		return res.status(200).json("User successfully updated");
+		return res.status(200).json("Usuário atualizado com sucesso!");
 	});
 };
 
@@ -41,6 +41,6 @@ export const deleteUser = (req, res) => {
 	database.query(deleteQuery, [req.params.id], err => {
 		if (err) return res.json(err);
 
-		return res.status(200).json("User successfully deleted");
+		return res.status(200).json("Usuário removido com sucesso!");
 	});
 };
